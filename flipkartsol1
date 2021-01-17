@@ -1,0 +1,32 @@
+
+
+class Solution:
+    def smallestnum (self,N):
+        l=list(str(N))
+        h=sorted(l)
+        s=""
+        for i in h:
+            if i!='0':
+                s=s+i
+                h.remove(i)
+                break
+        return s[0]+"".join(h)
+        
+
+
+
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+
+if __name__ == '__main__': 
+    t = int (input ())
+    for _ in range (t):
+        N = input()
+        ob = Solution()
+        ans = ob.smallestnum(N)
+        print(ans)
+
+# } Driver Code Ends
